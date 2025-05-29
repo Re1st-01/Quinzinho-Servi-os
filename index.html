@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Quinzinho Serviços - Areia, brita, cascalho, grama e serviços de limpeza de terreno e máquinas em Brasília.">
+  <meta name="keywords" content="areia, brita, cascalho, aterro, grama, limpeza de terreno, entulho, Brasília, construção">
+  <meta name="author" content="Quinzinho Serviços">
+
+  <title>Quinzinho, Areia e Brita</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            laranja: '#e67e22',
+            marrom: '#3e2f1b',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    @keyframes fade {
+      0%, 100% { opacity: 0; }
+      10%, 90% { opacity: 1; }
+    }
+  </style>
+
+</head>
+<body class="bg-stone-100 text-marrom">
+
+<!-- HEADER COM CARROSSEL -->
+<header class="relative h-screen w-full overflow-hidden flex items-center justify-center text-white text-center">
+  <!-- Fundo com imagens -->
+  <div id="carousel" class="absolute inset-0 z-0">
+    <img src="assets/caminhao.jpeg" class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-1000" />
+    <img src="assets/i1.jpg" class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-1000" />
+    <img src="assets/aterro2.jpg" class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-1000" />
+    <img src="assets/i2.jpg" class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-1000" />
+    <img src="assets/img1.jpg" class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-1000" />
+  </div>
+
+  <!-- Sobreposição escura para melhorar contraste -->
+  <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+
+  <!-- Conteúdo -->
+  <div class="relative z-20 flex flex-col items-center justify-center px-4">
+    <!-- Logo Redonda -->
+    <img src="assets/logo1.jpg" alt="Logo" class="w-40 md:w-56 rounded-full border-4 border-white shadow-lg mb-6" />
+
+    <!-- Nome da empresa -->
+    <h1 class="text-3xl md:text-5xl font-bold mb-4">O Melhor da Região!</h1>
+
+    <!-- Botão de Orçamento -->
+    <a href="https://wa.me/+5561992200318" target="_blank"
+       class="bg-laranja text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-orange-600 transition duration-300">
+      Faça seu Orçamento
+    </a>
+  </div>
+</header>
+
+
+
+<!-- NAV Dinâmico -->
+<nav id="mainNav" class="bg-marrom text-white px-6 py-4 flex items-center justify-between transition-all duration-300">
+  <div class="nav_logo flex items-center space-x-2">
+    <img class="logo-bar h-12 w-auto rounded-full border-4 border-Black shadow-lg  transition-all duration-300" src="assets/ent.webp" alt="Logo" />
+    <span class="text-xl font-bold">Quinzinho</span>
+  </div>
+  <div class="space-x-4">
+    <a href="#services" class="hover:text-laranja transition-colors duration-200">Serviços</a>
+    <a href="#produtos" class="hover:text-laranja transition-colors duration-200">Produtos</a>
+  </div>
+</nav>
+
+
+
+  <!-- BOTÃO FLUTUANTE DE ORÇAMENTO -->
+  <a href="https://wa.me/+5561992200318" target="_blank"
+     class="fixed bottom-6 right-6 bg-laranja text-white px-6 py-3 rounded-full shadow-lg text-lg font-bold hover:scale-105 transition-transform duration-300 z-50">
+    📲 Fazer Orçamento
+  </a>
+
+  <!-- SERVIÇOS -->
+  <section id="services" class="py-16 px-6">
+    <h2 class="text-3xl font-bold text-center text-marrom mb-8">Serviços</h2>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <!-- Serviço -->
+      <div class="bg-white shadow-lg rounded-xl p-6 text-center hover:scale-105 transition duration-300">
+        <h3 class="text-xl font-semibold mb-2">Retirada de Entulho</h3>
+        <p class="text-gray-700">Removemos entulho e resíduos de obra com eficiência e segurança.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-xl p-6 text-center hover:scale-105 transition duration-300">
+        <h3 class="text-xl font-semibold mb-2">Serviços de Máquinas</h3>
+        <p class="text-gray-700">Operação de máquinas pesadas para construção e terraplanagem.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-xl p-6 text-center hover:scale-105 transition duration-300">
+        <h3 class="text-xl font-semibold mb-2">Corte de Terra</h3>
+        <p class="text-gray-700">Realizamos corte de terra para nivelamento de terrenos.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-xl p-6 text-center hover:scale-105 transition duration-300">
+        <h3 class="text-xl font-semibold mb-2">Limpeza de Terreno</h3>
+        <p class="text-gray-700">Preparamos o terreno para construção, removendo detritos e vegetação.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section id="produtos" class="bg-white py-16 px-6">
+    <h2 class="text-3xl font-bold text-center mb-10 text-marrom">Produtos para Construção</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-stone-100 rounded-2xl shadow p-6 text-center hover:shadow-xl hover:scale-105 transition duration-300">
+        <img src="assets/Areia-Grossa.jpg" alt="Areia" class="mx-auto rounded-xl mb-4 h-40 object-cover" />
+        <h3 class="text-xl font-semibold mb-2">Areia</h3>
+        <p class="text-gray-700">Areia fina e grossa para obras civis, reboco e assentamento.</p>
+      </div>
+      <div class="bg-stone-100 rounded-2xl shadow p-6 text-center hover:shadow-xl hover:scale-105 transition duration-300">
+        <img src="assets/Brita.jpg" alt="Brita 1" class="mx-auto rounded-xl mb-4 h-40 object-cover" />
+        <h3 class="text-xl font-semibold mb-2">Brita </h3>
+        <p class="text-gray-700">Ideal para concretos estruturais e lajes.</p>
+      </div>
+      <div class="bg-stone-100 rounded-2xl shadow p-6 text-center hover:shadow-xl hover:scale-105 transition duration-300">
+        <img src="assets/Cascalho.jpg" alt="Cascalho" class="mx-auto rounded-xl mb-4 h-40 object-cover" />
+        <h3 class="text-xl font-semibold mb-2">Cascalho</h3>
+        <p class="text-gray-700">Utilizado em pavimentação e drenagem de terrenos.</p>
+      </div>
+      <div class="bg-stone-100 rounded-2xl shadow p-6 text-center hover:shadow-xl hover:scale-105 transition duration-300">
+        <img src="assets/Aterro.jpg" alt="Aterro" class="mx-auto rounded-xl mb-4 h-40 object-cover" />
+        <h3 class="text-xl font-semibold mb-2">Aterro</h3>
+        <p class="text-gray-700">Terra própria para nivelamento e compactação.</p>
+      </div>
+      <div class="bg-stone-100 rounded-2xl shadow p-6 text-center hover:shadow-xl hover:scale-105 transition duration-300">
+        <img src="assets/Grama.jpg" alt="Grama" class="mx-auto rounded-xl mb-4 h-40 object-cover" />
+        <h3 class="text-xl font-semibold mb-2">Grama</h3>
+        <p class="text-gray-700">Grama esmeralda e outras para paisagismo e jardins.</p>
+      </div>
+      <div class="bg-stone-100 rounded-2xl shadow p-6 text-center hover:shadow-xl hover:scale-105 transition duration-300">
+        <img src="assets/Terra.jpg" alt="Grama" class="mx-auto rounded-xl mb-4 h-40 object-cover" />
+        <h3 class="text-xl font-semibold mb-2">Terra para Grama</h3>
+        <p class="text-gray-700">Terra para grama da melhor qualiade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPA -->
+  <section id="mapa" class="py-16 px-6">
+    <h2 class="text-3xl font-bold text-center text-marrom mb-6">Nossa Localização</h2>
+    <div class="w-full max-w-5xl mx-auto rounded overflow-hidden shadow-lg">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1920.0241478559954!2d-47.76494862887052!3d-15.748584163679865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3d809bd8bba9%3A0x7dd952f3d4ac08d3!2sCondom%C3%ADnio%20Fazendinha%20Q%203%20Conjunto%20C%20D%20-%20Condom%C3%ADnio%20Fazendinha%20Q%203%20-%20Itapo%C3%A3%2C%20Bras%C3%ADlia%20-%20DF!5e0!3m2!1spt-BR!2sbr!4v1740954657849!5m2!1spt-BR!2sbr"  
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <footer class="bg-marrom text-white py-8">
+  <div class="container mx-auto flex flex-col items-center space-y-6 px-4">
+
+    <!-- Logo redondo -->
+    <img src="assets/logo2.jpg" alt="Logo da empresa" class="w-24 h-24 rounded-full shadow-lg" />
+
+    <!-- Links centralizados, um embaixo do outro -->
+    <div class="flex flex-col items-center space-y-2 text-center">
+      <a href="https://maps.app.goo.gl/2ud9YV6Cth8wa1Bw7" target="_blank" class="hover:text-laranja transition-colors">
+        📍 Condomínio Fazendinha Q 3 - Itapoã, Brasília - DF
+      </a>
+      <a href="tel:+5561992200318" class="hover:text-laranja transition-colors">
+        📞 (61) 99220-0318
+      </a>
+    </div>
+
+    <!-- Textos menores embaixo -->
+    <p class="text-sm opacity-75">&copy; 2025 Quinzinho Serviços. Todos os direitos reservados.</p>
+    <p class="text-sm opacity-75">
+  Desenvolvido por 
+  <a href="https://www.linkedin.com/in/re1stx/" target="_blank" class="text-laranja font-semibold hover:underline">
+    Re1stx
+  </a>
+</p>
+
+
+  </div>
+</footer>
+
+
+  <script src="index.js"></script>
+</body>
+</html>
